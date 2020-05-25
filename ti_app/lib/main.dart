@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
 
       title: 'Flutter Demo',
-      initialRoute: '/',
+      initialRoute: '/login',
       routes: {
-        '/' : (context) => LoginPage(),
+        '/login' : (context) => LoginPage(),
         RegisterPage.routeName : (context) => RegisterPage(),
         HomePage.routeName : (context) => HomePage(),
       },
@@ -163,7 +163,7 @@ class RegisterPage extends StatelessWidget {
               SizedBox(height: 30,),
               MaterialButton(
                 onPressed: (){
-                  Navigator.pop(context);
+                  Navigator.pushNamed(context, '/login');
                 },
                 child: Text('Register', style: TextStyle(color: Colors.white, fontSize: 20),),
                 color: Colors.teal,
